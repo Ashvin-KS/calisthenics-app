@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive German A1 Cheatsheet (Dark Mode)</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --main-color: #1e1e1e;
+            --header-color: #1c1c1c;
+            --text-color: #e0e0e0;
+            --primary-color: #4a90e2;
+            --border-color: #3a3a3a;
+            --shadow-color: rgba(0,0,0,0.4);
+            --table-header-bg: #333333;
+            --table-row-alt-bg: #2a2a2a;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--header-color);
+            color: #ffffff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        nav {
+            background: #282828;
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            padding: 0.75rem 1.25rem;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: var(--primary-color);
+        }
+
+        section {
+            background: var(--main-color);
+            margin: 1.5rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px var(--shadow-color);
+        }
+        
+        section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.75rem;
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--table-header-bg);
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--table-row-alt-bg);
+        }
+
+        .color-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .color-list li {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+        }
+
+        .color-swatch {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 1px solid #555;
+        }
+        
+        .verb-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .verb-columns {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--header-color);
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Comprehensive German A1 Cheatsheet</h1>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#phrases">Common Phrases</a></li>
+                <li><a href="#introductions">Introductions</a></li>
+                <li><a href="#time">Time & Dates</a></li>
+                <li><a href="#colors">Colors</a></li>
+                <li><a href="#verbs">Irregular Verbs</a></li>
+                <li><a href="#nouns">Nouns & Plurals</a></li>
+                <li><a href="#grammar">Grammar</a></li>
+                <li><a href="#numbers">Numbers</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- SECTION: COMMON PHRASES -->
+        <section id="phrases">
+            <h2>Common Phrases (Häufige Redemittel)</h2>
+            <table>
+                <thead>
+                    <tr><th>German</th><th>English</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Danke / Danke Schön!</td><td>Thanks / Thank you!</td></tr>
+                    <tr><td>Vielen Dank!</td><td>Thank you very much!</td></tr>
+                    <tr><td>Bitte / Bitte Schön!</td><td>Please / You're welcome</td></tr>
+                    <tr><td>Gern geschehen (informal)</td><td>You're welcome</td></tr>
+                    <tr><td>Entschuldigen Sie, bitte! (formal)</td><td>Excuse me, please...</td></tr>
+                    <tr><td>Entschuldige bitte... (informal)</td><td>Excuse me, please...</td></tr>
+                    <tr><td>Entschuldigung</td><td>Sorry</td></tr>
+                    <tr><td>Es tut mir Leid.</td><td>I'm sorry.</td></tr>
+                    <tr><td>Wie bitte?</td><td>I beg your pardon?</td></tr>
+                    <tr><td>nochmal bitte / noch einmal bitte</td><td>Once again please.</td></tr>
+                    <tr><td>Bitte wiederholen Sie!</td><td>Please repeat.</td></tr>
+                    <tr><td>Sprechen Sie Deutsch / Englisch? (formal)</td><td>Do you speak German / English?</td></tr>
+                    <tr><td>Sprichst du Englisch? (informal)</td><td>Do you speak English?</td></tr>
+                    <tr><td>Das stimmt!</td><td>That's correct!</td></tr>
+                    <tr><td>Einen Moment, bitte.</td><td>One moment, please.</td></tr>
+                    <tr><td>Ich habe eine Frage.</td><td>I have a question.</td></tr>
+                    <tr><td>Ich spreche ein wenig Deutsch.</td><td>I speak a little German.</td></tr>
+                    <tr><td>Ich weiß es nicht / Keine Ahnung</td><td>I don't know / no idea</td></tr>
+                    <tr><td>Ja, bitte!</td><td>Yes, please.</td></tr>
+                    <tr><td>Nein, danke.</td><td>No, thank you.</td></tr>
+                    <tr><td>Kein Problem.</td><td>No problem.</td></tr>
+                    <tr><td>Können Sie mir helfen? (formal)</td><td>Can you help me?</td></tr>
+                    <tr><td>Kannst du mir helfen? (informal)</td><td>Can you help me?</td></tr>
+                    <tr><td>Mach dir keine Sorgen.</td><td>Don't worry about it.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION: INTRODUCTIONS -->
+        <section id="introductions">
+            <h2>Introductions (Sich Vorstellen)</h2>
+            <table>
+                <thead>
+                    <tr><th>Formal Question (Sie)</th><th>Informal Question (du)</th><th>Your Answer</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Wie heißen Sie?</td><td>Wie heißt du?</td><td>Ich heiße ___.</td></tr>
+                    <tr><td>Wer sind Sie?</td><td>Wer bist du?</td><td>Ich bin ___.</td></tr>
+                    <tr><td>Woher kommen Sie?</td><td>Woher kommst du?</td><td>Ich komme aus ___.</td></tr>
+                    <tr><td>Wo wohnen Sie?</td><td>Wo wohnst du?</td><td>Ich wohne in ___.</td></tr>
+                    <tr><td>Wie alt sind Sie?</td><td>Wie alt bist du?</td><td>Ich bin ___ Jahre alt.</td></tr>
+                    <tr><td>Wann sind Sie geboren?</td><td>Wann bist du geboren?</td><td>Ich bin im ___ geboren.</td></tr>
+                    <tr><td>Welche Sprachen sprechen Sie?</td><td>Welche Sprachen sprichst du?</td><td>Ich spreche ___.</td></tr>
+                    <tr><td>Was ist Ihre Muttersprache?</td><td>Was ist deine Muttersprache?</td><td>Meine Muttersprache ist ___.</td></tr>
+                    <tr><td>Haben Sie ein Hobby?</td><td>Hast du ein Hobby?</td><td>Mein Hobby ist ___. / Ja, ich ___.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION: TIME & DATES -->
+        <section id="time">
+            <h2>Time & Dates (Zeit & Datum)</h2>
+            <h3>Time References</h3>
+            <table>
+                <thead><tr><th>German</th><th>English</th></tr></thead>
+                <tbody>
+                    <tr><td>vorgestern</td><td>the day before yesterday</td></tr>
+                    <tr><td>gestern</td><td>yesterday</td></tr>
+                    <tr><td>heute</td><td>today</td></tr>
+                    <tr><td>morgen</td><td>tomorrow</td></tr>
+                    <tr><td>übermorgen</td><td>the day after tomorrow</td></tr>
+                </tbody>
+            </table>
+            <h3>Days of the Week (Wochentage)</h3>
+            <table>
+                <thead><tr><th>German</th><th>English</th></tr></thead>
+                <tbody>
+                    <tr><td>Montag</td><td>Monday</td></tr>
+                    <tr><td>Dienstag</td><td>Tuesday</td></tr>
+                    <tr><td>Mittwoch</td><td>Wednesday</td></tr>
+                    <tr><td>Donnerstag</td><td>Thursday</td></tr>
+                    <tr><td>Freitag</td><td>Friday</td></tr>
+                    <tr><td>Samstag</td><td>Saturday</td></tr>
+                    <tr><td>Sonntag</td><td>Sunday</td></tr>
+                </tbody>
+            </table>
+            <h3>Months of the Year (Monate)</h3>
+            <table>
+                <thead><tr><th>German</th><th>English</th></tr></thead>
+                <tbody>
+                    <tr><td>Januar</td><td>January</td></tr>
+                    <tr><td>Februar</td><td>February</td></tr>
+                    <tr><td>März</td><td>March</td></tr>
+                    <tr><td>April</td><td>April</td></tr>
+                    <tr><td>Mai</td><td>May</td></tr>
+                    <tr><td>Juni</td><td>June</td></tr>
+                    <tr><td>Juli</td><td>July</td></tr>
+                    <tr><td>August</td><td>August</td></tr>
+                    <tr><td>September</td><td>September</td></tr>
+                    <tr><td>Oktober</td><td>October</td></tr>
+                    <tr><td>November</td><td>November</td></tr>
+                    <tr><td>Dezember</td><td>December</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION: COLORS -->
+        <section id="colors">
+            <h2>Colors (Die Farben)</h2>
+            <ul class="color-list">
+                <li><span class="color-swatch" style="background-color: #FF0000;"></span>rot</li>
+                <li><span class="color-swatch" style="background-color: #008000;"></span>grün</li>
+                <li><span class="color-swatch" style="background-color: #FFFF00;"></span>gelb</li>
+                <li><span class="color-swatch" style="background-color: #0000FF;"></span>blau</li>
+                <li><span class="color-swatch" style="background-color: #FFFFFF;"></span>weiß</li>
+                <li><span class="color-swatch" style="background-color: #000000;"></span>schwarz</li>
+                <li><span class="color-swatch" style="background-color: #A52A2A;"></span>braun</li>
+                <li><span class="color-swatch" style="background-color: #808080;"></span>grau</li>
+                <li><span class="color-swatch" style="background-color: #800080;"></span>lila</li>
+                <li><span class="color-swatch" style="background-color: #ADD8E6;"></span>hellblau</li>
+                <li><span class="color-swatch" style="background-color: #90EE90;"></span>hellgrün</li>
+                <li><span class="color-swatch" style="background-color: #00008B;"></span>dunkelblau</li>
+            </ul>
+        </section>
+
+        <!-- SECTION: IRREGULAR VERBS -->
+        <section id="verbs">
+            <h2>All A1 Irregular Verbs (Unregelmäßige Verben)</h2>
+            <div class="verb-columns">
+                <table>
+                    <thead><tr><th>German Verb</th><th>English Meaning</th></tr></thead>
+                    <tbody>
+                        <tr><td>anfangen</td><td>to begin, start</td></tr>
+                        <tr><td>anrufen</td><td>to call</td></tr>
+                        <tr><td>bekommen</td><td>to get, receive</td></tr>
+                        <tr><td>beginnen</td><td>to begin</td></tr>
+                        <tr><td>bringen</td><td>to bring</td></tr>
+                        <tr><td>denken</td><td>to think, guess</td></tr>
+                        <tr><td>dürfen</td><td>to be allowed</td></tr>
+                        <tr><td>einladen</td><td>to invite</td></tr>
+                        <tr><td>essen</td><td>to eat</td></tr>
+                        <tr><td>fahren</td><td>to drive, go</td></tr>
+                        <tr><td>finden</td><td>to find</td></tr>
+                        <tr><td>fliegen</td><td>to fly</td></tr>
+                        <tr><td>geben</td><td>to give</td></tr>
+                        <tr><td>gefallen</td><td>to please, like</td></tr>
+                        <tr><td>gehen</td><td>to go</td></tr>
+                        <tr><td>haben</td><td>to have</td></tr>
+                        <tr><td>heißen</td><td>to be called</td></tr>
+                        <tr><td>helfen</td><td>to help</td></tr>
+                        <tr><td>kennen</td><td>to know</td></tr>
+                        <tr><td>kommen</td><td>to come</td></tr>
+                        <tr><td>können</td><td>to be able to, can</td></tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead><tr><th>German Verb</th><th>English Meaning</th></tr></thead>
+                     <tbody>
+                        <tr><td>lesen</td><td>to read</td></tr>
+                        <tr><td>mögen</td><td>to like</td></tr>
+                        <tr><td>müssen</td><td>to have to</td></tr>
+                        <tr><td>nehmen</td><td>to take</td></tr>
+                        <tr><td>schlafen</td><td>to sleep</td></tr>
+                        <tr><td>schreiben</td><td>to write</td></tr>
+                        <tr><td>schwimmen</td><td>to swim</td></tr>
+                        <tr><td>sehen</td><td>to see</td></tr>
+                        <tr><td>sein</td><td>to be</td></tr>
+                        <tr><td>singen</td><td>to sing</td></tr>
+                        <tr><td>sollen</td><td>to shall</td></tr>
+                        <tr><td>sprechen</td><td>to speak</td></tr>
+                        <tr><td>stehen</td><td>to stand</td></tr>
+                        <tr><td>treffen</td><td>to meet</td></tr>
+                        <tr><td>trinken</td><td>to drink</td></tr>
+                        <tr><td>tun</td><td>to do</td></tr>
+                        <tr><td>werden</td><td>to become</td></tr>
+                        <tr><td>wissen</td><td>to know sth</td></tr>
+                        <tr><td>wollen</td><td>to want</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION: NOUN GENDER & PLURALS -->
+        <section id="nouns">
+            <h2>Noun Gender & Plural Rules (Genus & Plural)</h2>
+            <p>In German, every noun has a grammatical gender, indicated by its definite article. This is crucial for grammar.</p>
+            <ul>
+                <li><strong>Masculine:</strong> der (e.g., der Tisch - the table)</li>
+                <li><strong>Feminine:</strong> die (e.g., die Schule - the school)</li>
+                <li><strong>Neuter:</strong> das (e.g., das Buch - the book)</li>
+            </ul>
+            <p>The plural form of nouns must be memorized. However, there are common patterns:</p>
+            
+            <h3>Common Plural Formations</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rule / Ending</th>
+                        <th>Explanation & Common Gender</th>
+                        <th>Singular Example</th>
+                        <th>Plural Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>-e</strong></td>
+                        <td>Very common for masculine and neuter nouns. Often adds an Umlaut (ä, ö, ü).</td>
+                        <td>der Tisch / der Stuhl</td>
+                        <td>die Tische / die Stühle</td>
+                    </tr>
+                    <tr>
+                        <td><strong>-(e)n</strong></td>
+                        <td>The most common plural. Used for almost all feminine nouns and many others.</td>
+                        <td>die Frau / die Lampe</td>
+                        <td>die Frauen / die Lampen</td>
+                    </tr>
+                     <tr>
+                        <td><strong>-er</strong></td>
+                        <td>Common for neuter nouns. Almost always adds an Umlaut if possible.</td>
+                        <td>das Kind / das Buch</td>
+                        <td>die Kinder / die Bücher</td>
+                    </tr>
+                    <tr>
+                        <td><strong>-s</strong></td>
+                        <td>Mostly for nouns from other languages (especially English) and abbreviations.</td>
+                        <td>das Auto / das Hobby</td>
+                        <td>die Autos / die Hobbys</td>
+                    </tr>
+                    <tr>
+                        <td><strong>No Change</strong></td>
+                        <td>Masculine and neuter nouns ending in -er, -el, -en often don't change.</td>
+                        <td>der Lehrer / das Fenster</td>
+                        <td>die Lehrer / die Fenster</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION: ESSENTIAL GRAMMAR FOR EXAMS -->
+        <section id="grammar">
+            <h2>Essential Grammar for Exams (Wichtige Grammatik)</h2>
+
+            <h3>Verb Conjugation (Präsens - Present Tense)</h3>
+            <p>Verbs change their ending based on the subject (ich, du, er/sie/es, etc.).</p>
+            <table>
+                <thead>
+                    <tr><th>Pronoun</th><th>Regular Ending</th><th>Example: wohnen (to live)</th><th>haben (to have)</th><th>sein (to be)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ich (I)</td><td><strong>-e</strong></td><td>wohn<strong>e</strong></td><td>hab<strong>e</strong></td><td>bin</td></tr>
+                    <tr><td>du (you, informal)</td><td><strong>-st</strong></td><td>wohn<strong>st</strong></td><td>ha<strong>st</strong></td><td>bist</td></tr>
+                    <tr><td>er/sie/es (he/she/it)</td><td><strong>-t</strong></td><td>wohn<strong>t</strong></td><td>ha<strong>t</strong></td><td>ist</td></tr>
+                    <tr><td>wir (we)</td><td><strong>-en</strong></td><td>wohn<strong>en</strong></td><td>hab<strong>en</strong></td><td>sind</td></tr>
+                    <tr><td>ihr (you, plural informal)</td><td><strong>-t</strong></td><td>wohn<strong>t</strong></td><td>hab<strong>t</strong></td><td>seid</td></tr>
+                    <tr><td>sie/Sie (they/you, formal)</td><td><strong>-en</strong></td><td>wohn<strong>en</strong></td><td>hab<strong>en</strong></td><td>sind</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Question Formation (Fragen bilden)</h3>
+            <p><strong>W-Fragen (Information Questions):</strong> The verb is always in the second position.</p>
+            <ul>
+                <li><strong>Was</strong> studieren Sie? (What do you study?)</li>
+                <li><strong>Wo</strong> liegt Berlin? (Where is Berlin located?)</li>
+                <li><strong>Wie</strong> alt bist du? (How old are you?)</li>
+                <li><strong>Wer</strong> ist das? (Who is that?)</li>
+            </ul>
+            <p><strong>Ja/Nein-Fragen (Yes/No Questions):</strong> The verb is always in the first position.</p>
+            <ul>
+                <li><strong>Haben</strong> Sie ein Auto? (Do you have a car?) -> Ja / Nein.</li>
+                <li><strong>Wohnen</strong> Sie in Berlin? (Do you live in Berlin?) -> Ja / Nein.</li>
+            </ul>
+
+            <h3>Possessive Pronouns (Possessivpronomen)</h3>
+            <p>These show ownership and must match the person.</p>
+            <table>
+                <thead>
+                    <tr><th>Subject</th><th>Possessive Pronoun (base form)</th><th>Example Sentence</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>ich (I)</td><td><strong>mein</strong></td><td>Das ist <strong>mein</strong> Buch.</td></tr>
+                    <tr><td>du (you)</td><td><strong>dein</strong></td><td>Wo ist <strong>dein</strong> Tisch?</td></tr>
+                    <tr><td>er (he) / es (it)</td><td><strong>sein</strong></td><td><strong>Sein</strong> Schwester arbeitet in Berlin.</td></tr>
+                    <tr><td>sie (she)</td><td><strong>ihr</strong></td><td><strong>Ihr</strong> Hobby ist Reisen.</td></tr>
+                    <tr><td>wir (we)</td><td><strong>unser</strong></td><td><strong>Unsere</strong> Kinder spielen Fussball.</td></tr>
+                    <tr><td>ihr (you all)</td><td><strong>euer</strong></td><td>Ist das <strong>euer</strong> Auto?</td></tr>
+                    <tr><td>sie (they)</td><td><strong>ihr</strong></td><td><strong>Ihr</strong> Haus ist groß.</td></tr>
+                    <tr><td>Sie (you, formal)</td><td><strong>Ihr</strong> (capitalized)</td><td>Wie ist <strong>Ihr</strong> Name?</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION: NUMBERS UP TO A MILLION -->
+        <section id="numbers">
+            <h2>Numbers up to a Million (Zahlen bis zur Million)</h2>
+            <p>German numbers are often written as one long word.</p>
+            
+            <h3>The Basics: 1-20</h3>
+            <table>
+                <thead>
+                    <tr><th>Number</th><th>German</th><th>Number</th><th>German</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>eins</td><td>11</td><td>elf</td></tr>
+                    <tr><td>2</td><td>zwei</td><td>12</td><td>zwölf</td></tr>
+                    <tr><td>3</td><td>drei</td><td>13</td><td>dreizehn</td></tr>
+                    <tr><td>4</td><td>vier</td><td>14</td><td>vierzehn</td></tr>
+                    <tr><td>5</td><td>fünf</td><td>15</td><td>fünfzehn</td></tr>
+                    <tr><td>6</td><td>sechs</td><td>16</td><td>sechzehn</td></tr>
+                    <tr><td>7</td><td>sieben</td><td>17</td><td>siebzehn</td></tr>
+                    <tr><td>8</td><td>acht</td><td>18</td><td>achtzehn</td></tr>
+                    <tr><td>9</td><td>neun</td><td>19</td><td>neunzehn</td></tr>
+                    <tr><td>10</td><td>zehn</td><td>20</td><td>zwanzig</td></tr>
+                </tbody>
+            </table>
+
+            <h3>Numbers from 21 to 99</h3>
+            <p>The structure is: <strong>(unit) UND (ten)</strong>. For example, 53 is "drei<strong>und</strong>fünfzig".</p>
+            <ul>
+                <li><strong>50:</strong> fünfzig</li>
+                <li><strong>60:</strong> sechzig</li>
+                <li><strong>70:</strong> siebzig</li>
+                <li><strong>80:</strong> achtzig</li>
+                <li><strong>81:</strong> einundachtzig</li>
+                <li><strong>99:</strong> neunundneunzig</li>
+            </ul>
+            <h3>Hundreds (Hunderter)</h3>
+            <p>Structure: <strong>(number)hundert(rest of number)</strong>.</p>
+            <ul>
+                <li><strong>100:</strong> (ein)hundert</li>
+                <li><strong>200:</strong> zweihundert</li>
+                <li><strong>350:</strong> dreihundertfünfzig</li>
+                <li><strong>876:</strong> achthundertsechsundsiebzig</li>
+            </ul>
+            <h3>Thousands (Tausender) and Beyond</h3>
+            <p>The same logic continues.</p>
+            <ul>
+                <li><strong>1.000:</strong> (ein)tausend</li>
+                <li><strong>2.008:</strong> zweitausendacht</li>
+                <li><strong>5.642:</strong> fünftausendsechshundertzweiundvierzig</li>
+                <li><strong>10.000:</strong> zehntausend</li>
+                <li><strong>50.000:</strong> fünfzigtausend</li>
+                <li><strong>100.000:</strong> (ein)hunderttausend</li>
+                <li><strong>1.000.000:</strong> eine Million</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Your Comprehensive A1 German Reference Guide</p>
+    </footer>
+
+</body>
+</html>

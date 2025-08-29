@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCSE205L: Computer Architecture & Organization Study Guide</title>
+    <style>
+        :root {
+            --primary-color: #005A9C;
+            --secondary-color: #333;
+            --background-color: #f4f7f9;
+            --container-bg: #ffffff;
+            --header-bg: #e9ecef;
+            --border-color: #dee2e6;
+            --accent-color: #e63946;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--secondary-color);
+        }
+
+        .sidebar {
+            width: 240px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            background-color: #fff;
+            padding: 20px;
+            overflow-y: auto;
+            border-right: 1px solid var(--border-color);
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+        }
+
+        .sidebar h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            color: var(--accent-color);
+        }
+
+        .content {
+            margin-left: 280px; /* Sidebar width + padding */
+            padding: 20px 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 30px;
+            background: var(--container-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding-top: 60px; /* Offset for fixed header/sidebar */
+            margin-top: -60px; /* Negative margin to keep layout tight */
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--header-bg);
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        code {
+            background-color: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        #topBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        #topBtn:hover {
+            background-color: #004175;
+        }
+
+        @media (max-width: 992px) {
+            .sidebar {
+                display: none;
+            }
+            .content {
+                margin-left: 0;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top">▲</button>
+
+    <nav class="sidebar">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="#part1">Part 1: Foundations</a></li>
+            <li><a href="#part2">Part 2: System Structure</a></li>
+            <li><a href="#part3">Part 3: CPU In-Depth</a></li>
+            <li><a href="#part4">Part 4: Architectural Models</a></li>
+            <li><a href="#part5">Part 5: ISA</a></li>
+            <li><a href="#part6">Part 6: Data & Arithmetic</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="container">
+            <h1>BCSE205L: Comprehensive Theory Guide</h1>
+
+            <section id="part1">
+                <h2>Part 1: Foundations of Computer Architecture & Organization</h2>
+                
+                <h3>1.1. Computer Architecture vs. Computer Organization</h3>
+                <p>This is the most fundamental distinction in the course, defining the boundary between the logical view (architecture) and the physical implementation (organization).</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Computer Architecture</th>
+                            <th>Computer Organization</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Definition</strong></td>
+                            <td>The attributes of a system visible to a programmer; the logical and functional behavior.</td>
+                            <td>The operational units and their interconnections that realize the architectural specifications; the physical implementation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Concerned with</strong></td>
+                            <td><strong>What</strong> the computer does.</td>
+                            <td><strong>How</strong> the computer does it.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Includes</strong></td>
+                            <td>Instruction set, number of bits for data types, I/O mechanisms, addressing modes.</td>
+                            <td>Control signals, component interfaces, memory technology, circuit design.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Analogy</strong></td>
+                            <td>The blueprint of a house (function of rooms).</td>
+                            <td>The construction details (bricks, wiring, plumbing).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Example</strong></td>
+                            <td>Whether a computer has a multiplication instruction.</td>
+                            <td>How that instruction is implemented (e.g., dedicated hardware vs. repeated addition).</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>1.2. The Program Execution Flow</h3>
+                <p>This sequence illustrates how a program written by a human is executed by the machine hardware.</p>
+                <img src="https://via.placeholder.com/800x200.png?text=High-Level+Code+->+Compiler+->+Assembler+->+Machine+Code+->+RAM+->+CPU" alt="Program Execution Flow Diagram">
+                
+                <h3>1.3. Key Industry Laws</h3>
+                <ul>
+                    <li><strong>Moore's Law:</strong> An observation that the number of transistors on a microchip doubles approximately every two years, leading to exponential growth in computing power and a decrease in cost.</li>
+                    <li><strong>Bell's Law:</strong> States that roughly every decade, a new, lower-priced class of computer emerges, creating entirely new industries (e.g., mainframes → PCs → smartphones → IoT devices).</li>
+                </ul>
+            </section>
+            
+            <section id="part2">
+                <h2>Part 2: The Structure of a Computer System</h2>
+
+                <h3>2.1. Functional Components of a Computer</h3>
+                <p>Every computer system is composed of five fundamental units that work together.</p>
+                <img src="https://via.placeholder.com/600x400.png?text=Functional+Components+Block+Diagram+(CPU,+Memory,+I/O,+Bus)" alt="Functional Components of a Computer">
+                <ul>
+                    <li><strong>Input Unit:</strong> Takes data from the outside world (e.g., keyboard).</li>
+                    <li><strong>Memory Unit:</strong> Stores programs and data (e.g., RAM).</li>
+                    <li><strong>Arithmetic and Logic Unit (ALU):</strong> Performs calculations and logical operations.</li>
+                    <li><strong>Control Unit (CU):</strong> Directs all other components by generating control signals.</li>
+                    <li><strong>Output Unit:</strong> Presents results to the user (e.g., monitor).</li>
+                </ul>
+
+                <h3>2.2. The Four Functions of a Computer</h3>
+                <ol>
+                    <li><strong>Data Processing:</strong> Executing arithmetic and logical operations on data.</li>
+                    <li><strong>Data Storage:</strong> Saving data and instructions in memory.</li>
+                    <li><strong>Data Movement:</strong> Transferring data between the computer and its peripherals (I/O).</li>
+                    <li><strong>Control:</strong> Managing the above three functions in a coordinated manner.</li>
+                </ol>
+                
+                <h3>2.3. System Interconnection: The Bus Structure</h3>
+                <p>A bus is a shared communication pathway connecting the major components.</p>
+                <img src="https://via.placeholder.com/700x300.png?text=System+Bus+Diagram+(Address,+Data,+Control+Buses)" alt="Bus Structure Diagram">
+                <ul>
+                    <li><strong>Data Bus:</strong> Bidirectional. Carries data and instructions.</li>
+                    <li><strong>Address Bus:</strong> Unidirectional. Carries the memory address of the location to be accessed.</li>
+                    <li><strong>Control Bus:</strong> Bidirectional. Carries control and timing signals to manage system activities.</li>
+                </ul>
+            </section>
+            
+            <section id="part3">
+                <h2>Part 3: The CPU and Instruction Execution</h2>
+
+                <h3>3.1. CPU Registers</h3>
+                <p>Registers are high-speed storage locations within the CPU.</p>
+                <h4>A. User-Visible Registers</h4>
+                <ul>
+                    <li><strong>General-Purpose Registers:</strong> Versatile registers for data or addresses.</li>
+                    <li><strong>Condition Codes (Flags):</strong> Bits storing the status of the last operation (Zero, Sign, Carry, Overflow).</li>
+                </ul>
+                <h4>B. Control and Status Registers</h4>
+                <ul>
+                    <li><strong>Program Counter (PC):</strong> Holds the address of the <strong>next</strong> instruction to be fetched.</li>
+                    <li><strong>Instruction Register (IR):</strong> Holds the <strong>current</strong> instruction being executed.</li>
+                    <li><strong>Memory Address Register (MAR):</strong> Holds the memory address for a read/write operation.</li>
+                    <li><strong>Memory Buffer Register (MBR):</strong> Holds the data being transferred to/from memory.</li>
+                </ul>
+                
+                <h3>3.2. The Instruction Cycle (Fetch-Decode-Execute)</h3>
+                <p>The fundamental operational process of a CPU.</p>
+                <img src="https://via.placeholder.com/600x450.png?text=Instruction+Cycle+State+Diagram+(Fetch,+Decode,+Execute)" alt="Instruction Cycle State Diagram">
+                
+                <h3>3.3. Register File</h3>
+                <p>A register file is an array of registers featuring multiple ports (e.g., two read, one write), which allows the CPU to access multiple operands and write a result in the same clock cycle, a key feature for pipelined performance.</p>
+                <img src="https://via.placeholder.com/500x350.png?text=Register+File+with+Multiple+Access+Ports" alt="Register File Diagram">
+            </section>
+            
+            <section id="part4">
+                <h2>Part 4: Architectural Models</h2>
+
+                <h3>4.1. Von Neumann vs. Harvard Architecture</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Von Neumann Architecture (IAS Computer)</th>
+                            <th>Harvard Architecture</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Memory</strong></td>
+                            <td>Single, shared memory for instructions and data.</td>
+                            <td>Separate memories for instructions and data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Buses</strong></td>
+                            <td>Single bus for fetching instructions and data.</td>
+                            <td>Separate buses for instructions and data.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bottleneck</strong></td>
+                            <td>Creates the "Von Neumann bottleneck" as instructions and data compete for the same bus.</td>
+                            <td>Eliminates this bottleneck, allowing simultaneous access.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Speed</strong></td>
+                            <td>Slower, as fetches are sequential.</td>
+                            <td>Faster, as instruction fetch can overlap with data access.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Use Case</strong></td>
+                            <td>General-purpose computers (PCs, servers).</td>
+                            <td>Specialized systems (DSPs, microcontrollers).</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>4.2. CISC vs. RISC Architectures</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>CISC (Complex Instruction Set Computer)</th>
+                            <th>RISC (Reduced Instruction Set Computer)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Philosophy</strong></td>
+                            <td>Emphasize hardware; single instructions do complex tasks.</td>
+                            <td>Emphasize software/compiler; instructions are simple and fast.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Instruction Set</strong></td>
+                            <td>Large and complex.</td>
+                            <td>Small and optimized.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Execution Time</strong></td>
+                            <td>Variable, multi-cycle instructions.</td>
+                            <td>Single-cycle instructions.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Memory Access</strong></td>
+                            <td>Many instructions can access memory.</td>
+                            <td>Only <code>LOAD</code> and <code>STORE</code> instructions access memory.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Control Unit</strong></td>
+                            <td>Microprogrammed.</td>
+                            <td>Hardwired.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modern Processors</strong></td>
+                            <td colspan="2">Modern CPUs (like x86) are hybrids. They use a CISC instruction set externally but internally translate instructions into RISC-like micro-operations for execution in a highly pipelined core.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <section id="part5">
+                <h2>Part 5: Instruction Set Architecture (ISA)</h2>
+                
+                <h3>5.1. Classification of Instructions</h3>
+                <ol>
+                    <li><strong>Data Processing:</strong> Arithmetic and logical operations.</li>
+                    <li><strong>Data Storage:</strong> Memory access instructions (load/store).</li>
+                    <li><strong>Data Movement:</strong> I/O and register-to-register moves.</li>
+                    <li><strong>Program Control:</strong> Branching, jumps, and procedure calls.</li>
+                </ol>
+
+                <h3>5.2. Addressing Modes</h3>
+                <p>Addressing modes define how the effective address of an operand is calculated.</p>
+                <ul>
+                    <li><strong>Immediate:</strong> Operand is a constant within the instruction.</li>
+                    <li><strong>Direct:</strong> Instruction contains the full memory address of the operand.</li>
+                    <li><strong>Indirect:</strong> Instruction points to a memory location that contains the address of the operand.</li>
+                    <li><strong>Register:</strong> Operand is in a CPU register.</li>
+                    <li><strong>Register Indirect:</strong> A register holds the memory address of the operand.</li>
+                    <li><strong>Displacement (Indexed/Relative):</strong> Address = Register value + Constant offset.</li>
+                </ul>
+            </section>
+            
+            <section id="part6">
+                <h2>Part 6: Data Representation & Arithmetic Concepts</h2>
+                
+                <h3>6.1. Signed Number Representation</h3>
+                <ul>
+                    <li><strong>Sign-Magnitude:</strong> Simple, but has two representations for zero and complex arithmetic.</li>
+                    <li><strong>1's Complement:</strong> Formed by inverting bits. Also has two zeros.</li>
+                    <li><strong>2's Complement:</strong> The standard for signed integers. Has one zero and simplifies arithmetic.</li>
+                </ul>
+
+                <h3>6.2. IEEE 754 Floating-Point Representation</h3>
+                <p>The standard format for real numbers, consisting of a sign bit, a biased exponent, and a mantissa (fraction).</p>
+                <img src="https://via.placeholder.com/800x150.png?text=IEEE+754+Format+(Sign,+Exponent,+Mantissa)" alt="IEEE 754 Diagram">
+
+                <h3>6.3. Booth's Multiplication Algorithm</h3>
+                <p>An efficient algorithm for multiplying signed binary numbers in 2's complement form by recoding the multiplier to reduce the number of required operations.</p>
+                <img src="https://via.placeholder.com/600x500.png?text=Booth's+Algorithm+Flowchart" alt="Booth's Algorithm Flowchart">
+
+                <h3>6.4. Modified Booth's Algorithm (Bit-Pair Recoding)</h3>
+                <p>An enhancement that processes multiplier bits in groups to halve the number of partial products, significantly speeding up multiplication.</p>
+
+                <h3>6.5. Division Algorithms</h3>
+                <ul>
+                    <li><strong>Restoring Division:</strong> A simple algorithm that subtracts the divisor and "restores" the previous value if the result is negative.</li>
+                    <li><strong>Non-Restoring Division:</strong> A faster algorithm that avoids the restoration step by compensating for negative partial remainders in subsequent steps.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("topBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
+</body>
+</html>
