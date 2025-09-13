@@ -6,9 +6,9 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); /* Darker, more intense black gradient */
   min-height: 100vh;
-  color: #333;
+  color: #e0e0e0; /* Lighter text color for contrast */
 }
 
 .app-container {
@@ -26,9 +26,9 @@ body {
 .right-sidebar {
   width: 600px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3); /* Darker sidebar background */
   backdrop-filter: blur(10px);
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border */
   transition: width 0.3s ease;
 }
 
@@ -70,12 +70,12 @@ body {
 
 /* Header */
 .header {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3); /* Darker header background */
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 20px;
   margin-bottom: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border */
 }
 
 .header-content {
@@ -124,14 +124,14 @@ body {
 }
 
 .stat-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.05); /* Darker, transparent background for cards */
   border-radius: 16px;
   padding: 24px;
   display: flex;
   align-items: center;
   gap: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -153,13 +153,13 @@ body {
 .stat-value {
   font-size: 28px;
   font-weight: 700;
-  color: #2d3748;
+  color: #e0e0e0; /* Lighter text color */
   line-height: 1;
 }
 
 .stat-label {
   font-size: 14px;
-  color: #718096;
+  color: #a0a0a0; /* Lighter text color */
   margin-top: 4px;
 }
 
@@ -176,17 +176,17 @@ body {
   padding: 12px 20px;
   border: none;
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05); /* Darker, transparent background */
   color: #fff;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border */
 }
 
 .day-button:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1); /* Slightly lighter on hover */
   transform: translateY(-2px);
 }
 
@@ -198,18 +198,18 @@ body {
 
 /* Workout Header */
 .workout-header {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.05); /* Darker, transparent background */
   border-radius: 20px;
   padding: 30px;
   margin-bottom: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border */
 }
 
 .workout-title h1 {
   font-size: 32px;
   font-weight: 700;
-  color: #2d3748;
+  color: #e0e0e0; /* Lighter text color */
   margin-bottom: 12px;
 }
 
@@ -256,7 +256,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #4a5568;
+  color: #a0a0a0; /* Lighter text color */
   font-weight: 500;
 }
 
@@ -268,12 +268,12 @@ body {
 
 /* Timer Section */
 .timer-section {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.05); /* Darker, transparent background */
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border */
   text-align: center;
 }
 
@@ -294,7 +294,7 @@ body {
 .timer-text {
   font-size: 36px;
   font-weight: 700;
-  color: #2d3748;
+  color: #e0e0e0; /* Lighter text color */
   font-family: 'Courier New', monospace;
 }
 
@@ -340,12 +340,12 @@ body {
 
 /* Progress Section */
 .progress-section {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.05); /* Darker, transparent background */
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border */
 }
 
 .progress-header {
@@ -354,7 +354,7 @@ body {
   align-items: center;
   margin-bottom: 16px;
   font-weight: 600;
-  color: #2d3748;
+  color: #e0e0e0; /* Lighter text color */
 }
 
 .progress-bar {
@@ -374,18 +374,18 @@ body {
 
 /* Exercises Section */
 .exercises-section {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.05); /* Darker, transparent background */
   border-radius: 20px;
   padding: 30px;
   margin-bottom: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border */
 }
 
 .exercises-section h2 {
   font-size: 24px;
   font-weight: 700;
-  color: #2d3748;
+  color: #e0e0e0; /* Lighter text color */
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -399,8 +399,8 @@ body {
 }
 
 .exercise-card {
-  background: #f8fafc;
-  border: 2px solid #e2e8f0;
+  background: rgba(255, 255, 255, 0.03); /* Darker, transparent background */
+  border: 2px solid rgba(255, 255, 255, 0.08); /* Lighter border */
   border-radius: 16px;
   padding: 24px;
   transition: all 0.2s ease;
@@ -408,14 +408,14 @@ body {
 }
 
 .exercise-card:hover {
-  border-color: #667eea;
+  border-color: #4facfe; /* More vibrant hover color */
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .exercise-card.completed {
-  background: linear-gradient(135deg, #d4edda, #c3e6cb);
-  border-color: #26de81;
+  background: linear-gradient(135deg, #20bf6b, #1a9a5a); /* Darker green gradient */
+  border-color: #20bf6b;
   box-shadow: 0 4px 20px rgba(38, 222, 129, 0.2);
 }
 
@@ -468,7 +468,7 @@ body {
 .exercise-name {
   font-size: 18px;
   font-weight: 600;
-  color: #2d3748;
+  color: #e0e0e0; /* Lighter text color */
   margin-bottom: 8px;
 }
 
@@ -476,18 +476,19 @@ body {
   display: flex;
   gap: 16px;
   font-size: 14px;
-  color: #718096;
+  color: #a0a0a0; /* Lighter text color */
   font-weight: 500;
 }
 
 .exercise-sets,
 .exercise-reps {
-  background: #e2e8f0;
+  background: rgba(255, 255, 255, 0.1); /* Darker, transparent background */
   padding: 4px 8px;
   border-radius: 8px;
   display: flex; /* Added for alignment of reps and controls */
   align-items: center; /* Added for alignment of reps and controls */
   gap: 8px; /* Space between reps text and controls */
+  color: #e0e0e0; /* Lighter text color */
 }
 
 .rep-adjust-controls {
@@ -496,7 +497,7 @@ body {
 }
 
 .rep-adjust-controls button {
-  background: #cbd5e0;
+  background: rgba(255, 255, 255, 0.15); /* Darker, transparent background */
   border: none;
   border-radius: 4px;
   padding: 2px 6px;
@@ -504,10 +505,11 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
+  color: #e0e0e0; /* Lighter text color */
 }
 
 .rep-adjust-controls button:hover {
-  background: #a0aec0;
+  background: rgba(255, 255, 255, 0.25); /* Slightly lighter on hover */
 }
 
 .exercise-targets {
@@ -516,7 +518,7 @@ body {
   gap: 8px;
   margin-bottom: 12px;
   font-size: 14px;
-  color: #4a5568;
+  color: #a0a0a0; /* Lighter text color */
   font-weight: 500;
 }
 
@@ -528,7 +530,7 @@ body {
 
 .exercise-description {
   font-size: 14px;
-  color: #718096;
+  color: #a0a0a0; /* Lighter text color */
   line-height: 1.5;
   font-style: italic;
   margin-bottom: 16px; /* Added margin for spacing */
@@ -544,15 +546,15 @@ body {
 .set-bar {
   flex: 1;
   height: 30px; /* Increased height for better clickability */
-  background: #e2e8f0;
-  border: 1px solid #cbd5e0;
+  background: rgba(255, 255, 255, 0.1); /* Darker, transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Lighter border */
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #718096; /* Icon color for incomplete */
+  color: #a0a0a0; /* Lighter icon color for incomplete */
 }
 
 .set-bar:hover {
@@ -576,19 +578,19 @@ body {
   padding: 20px;
   border: none;
   border-radius: 16px;
-  background: linear-gradient(135deg, #ffd700, #ffb347);
-  color: #2d3748;
+  background: linear-gradient(135deg, #4facfe, #00f2fe); /* More vibrant blue gradient */
+  color: #fff; /* White text for contrast */
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(79, 172, 254, 0.3); /* Blue shadow */
   margin-bottom: 30px;
 }
 
 .complete-workout-btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 12px 40px rgba(79, 172, 254, 0.4); /* Blue shadow on hover */
 }
 
 .complete-icon {
@@ -675,14 +677,14 @@ body {
 
 /* Completion Message */
 .completion-message {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.05); /* Darker, transparent background */
   border-radius: 20px;
   padding: 40px;
   margin-top: 50px;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #2d3748;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Lighter border */
+  color: #e0e0e0; /* Lighter text color */
 }
 
 .completion-icon {
@@ -696,10 +698,11 @@ body {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 15px;
+  color: #e0e0e0; /* Lighter text color */
 }
 
 .completion-message p {
   font-size: 18px;
-  color: #4a5568;
+  color: #a0a0a0; /* Lighter text color */
   margin-bottom: 10px;
 }
