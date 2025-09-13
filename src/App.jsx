@@ -35,7 +35,16 @@ const App = () => {
       completedToday: false
     };
   });
-  const [workoutCompletedToday, setWorkoutCompletedToday] = useState(false);
+  const [workoutCompletedToday, setWorkoutCompletedToday] = useState(() => {
+    const savedStats = localStorage.getItem('stats');
+    if (savedStats) {
+      const parsedStats = JSON.parse(savedStats);
+      const today = new Date().toLocaleDateString('en-US');
+      const lastCompleted = parsedStats.lastCompletedDate ? new Date(parsedStats.lastCompletedDate).toLocaleDateString('en-US') : null;
+      return parsedStats.completedToday && lastCompleted === today;
+    }
+    return false;
+  });
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const getEmbedUrl = (url) => {
@@ -147,27 +156,33 @@ const App = () => {
 
     setStats(prev => {
       let newStreak = prev.currentStreak;
+      let newTotalWorkouts = prev.totalWorkouts;
       const lastDate = prev.lastCompletedDate ? new Date(prev.lastCompletedDate) : null;
 
-      if (lastDate) {
-        const yesterday = new Date(today);
-        yesterday.setDate(today.getDate() - 1);
-        const yesterdayDateString = yesterday.toLocaleDateString('en-US');
+      if (!workoutCompletedToday) { // Only increment totalWorkouts if not already completed today
+        newTotalWorkouts += 1;
 
-        if (lastDate.toLocaleDateString('en-US') === yesterdayDateString) {
-          newStreak += 1;
-        } else if (lastDate.toLocaleDateString('en-US') !== todayDateString) {
-          // If last completed date is not yesterday and not today, reset streak
+        if (lastDate) {
+          const yesterday = new Date(today);
+          yesterday.setDate(today.getDate() - 1);
+          const yesterdayDateString = yesterday.toLocaleDateString('en-US');
+
+          if (lastDate.toLocaleDateString('en-US') === yesterdayDateString) {
+            newStreak += 1;
+          } else if (lastDate.toLocaleDateString('en-US') !== todayDateString) {
+            // If last completed date is not yesterday and not today, reset streak
+            newStreak = 1;
+          }
+        } else {
+          // First workout completed, start streak
           newStreak = 1;
         }
-      } else {
-        // First workout completed, start streak
-        newStreak = 1;
       }
+
 
       return {
         ...prev,
-        totalWorkouts: prev.totalWorkouts + 1,
+        totalWorkouts: newTotalWorkouts,
         totalTime: prev.totalTime + workoutTimer,
         currentStreak: newStreak,
         lastCompletedDate: today.toISOString(), // Store as ISO string for easy parsing
